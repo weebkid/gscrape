@@ -35,10 +35,12 @@ while True:
         if num not in range(1, index +1):
             print('Invalid index')
             continue
-        os.system(f'cmd /k "start /max {links[num-1]})
+        os.system(f'cmd /k "start /max {links[num-1]}')
             
     elif question == 'n':
         break
     else:
         print('Invalid option \n')
         continue
+
+extit()
