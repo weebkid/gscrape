@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup as bs
 import requests
-import os
+import webbrowser
 src = requests.get('https://gogoanime.gs').text
 soup = bs(src, 'lxml')
 
@@ -35,12 +35,12 @@ while True:
         if num not in range(1, index +1):
             print('Invalid index')
             continue
-        os.system(f'cmd /k "start /max {links[num-1]}')
-            
+        webbrowser.open(links[num-1])
+        break
     elif question == 'n':
         break
     else:
         print('Invalid option \n')
         continue
 
-extit()
+exit()
